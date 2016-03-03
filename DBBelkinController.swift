@@ -57,7 +57,7 @@ class DBBelkinController : NSObject, WeMoDeviceDiscoveryDelegate {
     }
     
     // MARK: WeMo Control
-    private func controlSwitch(udn: String, state: WeMoDeviceState){
+    func controlSwitch(udn: String, state: WeMoDeviceState){
         for d in self.devices {
             if d.udn == udn {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), { () -> Void in
